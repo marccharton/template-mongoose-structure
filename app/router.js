@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require("cors");
 
 const userRoute = require("./routes/user.routes");
+const newsRoute = require("./routes/news.routes");
 
 module.exports = app => {
     
@@ -35,6 +36,7 @@ module.exports = app => {
     // Models Routes
 
     app.use("/api/users", userRoute);
+    app.use("/api/news", newsRoute);
 
 
     // Error Routes
